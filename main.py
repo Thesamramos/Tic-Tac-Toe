@@ -45,6 +45,7 @@ def playGame():
         elif isBoardFull(board):
             printBoard(board)
             print("É um empate!!!")
+            game_over = True
         else:
             current_player = "O" if current_player == "X" else "X"
 
