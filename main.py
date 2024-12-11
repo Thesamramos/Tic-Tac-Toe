@@ -26,3 +26,14 @@ def playGame():
     board = inicializeBoard()
     current_player = "X"
     game_over = False
+
+    while not game_over:
+        printBoard(board)
+        try:
+            move = int(input(f"O jogador {current_player}, digite seu movimento (1-9): "))
+            if move < 0 or move > 8 or move != " ":
+                print("Movimento inválido. Tente novamente")
+                continue
+        except ValueError:
+            print("Por Favor, digite um número válido entre 1 e 9")
+        
