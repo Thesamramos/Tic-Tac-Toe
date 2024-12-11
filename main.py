@@ -36,4 +36,17 @@ def playGame():
                 continue
         except ValueError:
             print("Por Favor, digite um número válido entre 1 e 9")
-        
+
+        board[move] = current_player
+        if checkWin(board, current_player):
+            printBoard(board)
+            print(f"O jogador {current_player} ganhou!!!")
+            game_over = True
+        elif isBoardFull(board):
+            printBoard(board)
+            print("É um empate!!!")
+        else:
+            current_player = "O" if current_player == "X" else "X"
+
+if __name__ == "__main__":
+    playGame()
