@@ -21,3 +21,8 @@ def checkWin(board, player):
 
 def isBoardFull(board):
     return " " not in board
+
+def playGame():
+    board = inicializeBoard()
+    current_player = "X"
+    game_over = False
