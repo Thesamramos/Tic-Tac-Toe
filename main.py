@@ -18,3 +18,6 @@ def checkWin(board, player):
         if all(board[i] == player for i in pattern):
             return True
     return False
+
+def isBoardFull(board):
+    return " " not in board
